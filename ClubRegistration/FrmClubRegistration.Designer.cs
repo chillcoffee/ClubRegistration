@@ -32,7 +32,6 @@ namespace ClubRegistration
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@ namespace ClubRegistration
             this.label6 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,9 +78,9 @@ namespace ClubRegistration
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(18, 246);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1004, 503);
@@ -95,15 +95,6 @@ namespace ClubRegistration
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(819, 456);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(838, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 58);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -129,7 +120,7 @@ namespace ClubRegistration
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 18);
+            this.label1.Location = new System.Drawing.Point(15, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 0;
@@ -138,7 +129,7 @@ namespace ClubRegistration
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(19, 41);
+            this.textBox1.Location = new System.Drawing.Point(19, 48);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(250, 26);
             this.textBox1.TabIndex = 1;
@@ -146,7 +137,7 @@ namespace ClubRegistration
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(567, 106);
+            this.textBox2.Location = new System.Drawing.Point(567, 113);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(250, 26);
             this.textBox2.TabIndex = 3;
@@ -155,7 +146,7 @@ namespace ClubRegistration
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(563, 83);
+            this.label2.Location = new System.Drawing.Point(563, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 2;
@@ -164,7 +155,7 @@ namespace ClubRegistration
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(296, 106);
+            this.textBox3.Location = new System.Drawing.Point(296, 113);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(250, 26);
             this.textBox3.TabIndex = 5;
@@ -173,7 +164,7 @@ namespace ClubRegistration
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(292, 83);
+            this.label3.Location = new System.Drawing.Point(292, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 4;
@@ -182,7 +173,7 @@ namespace ClubRegistration
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(19, 106);
+            this.textBox4.Location = new System.Drawing.Point(19, 113);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 26);
             this.textBox4.TabIndex = 7;
@@ -191,7 +182,7 @@ namespace ClubRegistration
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 83);
+            this.label4.Location = new System.Drawing.Point(15, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 20);
             this.label4.TabIndex = 6;
@@ -200,7 +191,7 @@ namespace ClubRegistration
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(567, 41);
+            this.textBox5.Location = new System.Drawing.Point(567, 48);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(250, 26);
             this.textBox5.TabIndex = 9;
@@ -209,7 +200,7 @@ namespace ClubRegistration
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(563, 18);
+            this.label5.Location = new System.Drawing.Point(563, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 8;
@@ -218,7 +209,7 @@ namespace ClubRegistration
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(19, 175);
+            this.textBox6.Location = new System.Drawing.Point(19, 182);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(250, 26);
             this.textBox6.TabIndex = 13;
@@ -227,7 +218,7 @@ namespace ClubRegistration
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 152);
+            this.label6.Location = new System.Drawing.Point(15, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 20);
             this.label6.TabIndex = 12;
@@ -236,7 +227,7 @@ namespace ClubRegistration
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(296, 175);
+            this.textBox7.Location = new System.Drawing.Point(296, 182);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(250, 26);
             this.textBox7.TabIndex = 11;
@@ -245,11 +236,21 @@ namespace ClubRegistration
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(292, 152);
+            this.label7.Location = new System.Drawing.Point(292, 159);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 20);
             this.label7.TabIndex = 10;
             this.label7.Text = "Gender";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(836, 30);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(166, 50);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Refresh";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // FrmClubRegistration
             // 
@@ -284,7 +285,6 @@ namespace ClubRegistration
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -292,6 +292,7 @@ namespace ClubRegistration
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button4;
     }
 }
 
