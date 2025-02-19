@@ -30,7 +30,7 @@ namespace ClubRegistration
             try
             {
                 sqlConnect = new SqlConnection(connectionString);
-                sqlConnect.Open();
+
 
             }
             catch (Exception e)
@@ -44,13 +44,14 @@ namespace ClubRegistration
         {
 
 
-            string ViewClubMembers = "SELECT * FROM ClubMembers;";
-            sqlAdapter = new SqlDataAdapter("SELECT * FROM ClubMembers", sqlConnect);
+            string ViewClubMembers = "SELECT * FROM ClubMembers";
+            sqlAdapter = new SqlDataAdapter(ViewClubMembers, sqlConnect);
 
             dataTable = new DataTable();
             sqlAdapter.Fill(dataTable);
+            bindingSource = new BindingSource();
             bindingSource.DataSource = dataTable;
-            sqlConnect.Close();
+
             return true;
         }
 
