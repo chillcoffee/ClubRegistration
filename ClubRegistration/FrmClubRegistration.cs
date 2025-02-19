@@ -13,17 +13,43 @@ namespace ClubRegistration
     public partial class FrmClubRegistration : Form
     {
         private ClubRegistrationQuery clubRegistrationQuery;
-        private int ID, Age, count;
+        private int Age;
+        private long studID;
         private string FirstName, MiddleName, LastName, Gender, Program;
+
+        private void btn_Register_Click(object sender, EventArgs e)
+        {
+            Age = Convert.ToInt32(txtAge.Text);
+            studID = Convert.ToInt64(txtStudentId.Text);
+            FirstName = txtFirstName.Text;
+            MiddleName = txtMiddleName.Text;
+            LastName = txtLastName.Text;
+            Gender = txtGender.Text;
+            Program = txtProgram.Text;
+            clubRegistrationQuery.RegisterStudent(studID, FirstName, MiddleName, LastName, Age, Gender, Program);
+            RefreshListOfClubMembers();
+            ClearTextFields();
+
+        }
+
+
+        public void ClearTextFields()
+        {
+            txtStudentId.Clear();
+            txtLastName.Clear();
+            txtFirstName.Clear();
+            txtMiddleName.Clear();
+            txtProgram.Clear();
+            txtAge.Clear();
+            txtGender.Clear();
+
+        }
 
         private void FrmClubRegistration_Load(object sender, EventArgs e)
         {
             clubRegistrationQuery = new ClubRegistrationQuery();
             RefreshListOfClubMembers();
         }
-
-        private long StudentId;
-
 
         public FrmClubRegistration()
         {
@@ -34,6 +60,8 @@ namespace ClubRegistration
         {
             clubRegistrationQuery.DisplayList();
             dataGridView.DataSource = clubRegistrationQuery.bindingSource;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
     }
 }

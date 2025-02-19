@@ -14,15 +14,12 @@ namespace ClubRegistration
         private SqlConnection sqlConnect;
         private SqlCommand sqlCommand;
         private SqlDataAdapter sqlAdapter;
-        private SqlDataReader sqlReader;
+        //private SqlDataReader sqlReader;
 
         public DataTable dataTable;
         public BindingSource bindingSource;
 
         private string connectionString;
-
-        public string _FirstName, _MiddleName, _LastName, _Gender, _Program;
-        public int _Age;
 
         public ClubRegistrationQuery()
         {
@@ -35,31 +32,30 @@ namespace ClubRegistration
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error connecting to database.");
+                MessageBox.Show("Error connecting to database." + e.Message);
             }
-
+            dataTable = new DataTable();
+            bindingSource = new BindingSource();
         }
 
         public bool DisplayList()
         {
 
 
-            string ViewClubMembers = "SELECT * FROM ClubMembers";
+            string ViewClubMembers = "SELECT StudentId as 'Student ID', FirstName as 'First Name', MiddleName as 'Middle Name', LastName as 'Last Name', Age, Gender, Program FROM ClubMembers";
             sqlAdapter = new SqlDataAdapter(ViewClubMembers, sqlConnect);
 
-            dataTable = new DataTable();
+            dataTable.Clear();
             sqlAdapter.Fill(dataTable);
-            bindingSource = new BindingSource();
             bindingSource.DataSource = dataTable;
+
 
             return true;
         }
 
-        public bool RegisterStudent(int ID, long StudentID, string FirstName, string MiddleName, string LastName, int Age, string Gender, string Program)
+        public bool RegisterStudent(long StudentID, string FirstName, string MiddleName, string LastName, int Age, string Gender, string Program)
         {
-            sqlCommand = new SqlCommand("INSERT INTO ClubMembers VALUES(@ID, @StudentID, @FirstName, @MiddleName, @LastName, @Age, @Gender, @Program)", sqlConnect);
-            sqlCommand.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
-            sqlCommand.Parameters.Add("@RegistrationID", SqlDbType.BigInt).Value = StudentID;
+            sqlCommand = new SqlCommand("INSERT INTO ClubMembers VALUES(@StudentID, @FirstName, @MiddleName, @LastName, @Age, @Gender, @Program)", sqlConnect);
             sqlCommand.Parameters.Add("@StudentID", SqlDbType.VarChar).Value = StudentID;
             sqlCommand.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName;
             sqlCommand.Parameters.Add("@MiddleName", SqlDbType.VarChar).Value = MiddleName;
@@ -67,7 +63,9 @@ namespace ClubRegistration
             sqlCommand.Parameters.Add("@Age", SqlDbType.Int).Value = Age;
             sqlCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = Gender;
             sqlCommand.Parameters.Add("@Program", SqlDbType.VarChar).Value = Program;
-            sqlConnect.Open(); sqlCommand.ExecuteNonQuery(); sqlConnect.Close();
+            sqlConnect.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlConnect.Close();
             return true;
         }
     }
